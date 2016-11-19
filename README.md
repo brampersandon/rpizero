@@ -1,4 +1,4 @@
-# RaspberryPi Zero
+# Raspberry Pi Zero
 
 ## SSH over USB configuration
 
@@ -18,5 +18,5 @@ To connect to the RPi Zero without a network cable:
 8. SSH into the device with `ssh pi@raspberrypi.local`
 
 ## Other links
-http://www.jeffgeerling.com/blogs/jeff-geerling/controlling-pwr-act-leds-raspberry-pi
+http://www.jeffgeerling.com/blogs/jeff-geerling/controlling-pwr-act-leds-raspberry-pi  
 https://learn.adafruit.com/turning-your-raspberry-pi-zero-into-a-usb-gadget?view=all
