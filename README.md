@@ -46,6 +46,13 @@ Unzip, and place `websocketd` somewhere in your `PATH` (I used `/usr/bin` becaus
 - `/sys/class/net/usb0/statistics/tx_packets` for network packets transmitted
 - Check other `/sys/class` files for fun stuff (like LED controls, etc)
 
+## Bundled apps in this repo
+
+- `reporter/`: an app that curls a URL of your choosing with deets
+  - set host and port for URL in `app.js`
+- `nmon/`: an app that can use websockets to visualize network stuff
+  - run with `http-server -p 9999 & websocketd --port=8080 python nmon.py`
+  - kill with `killall node websocketd`
 ## Other links
 http://www.jeffgeerling.com/blogs/jeff-geerling/controlling-pwr-act-leds-raspberry-pi  
 https://learn.adafruit.com/turning-your-raspberry-pi-zero-into-a-usb-gadget?view=all

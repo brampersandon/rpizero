@@ -1,0 +1,12 @@
+[Unit]
+Description=System reporter (custom)
+Wants=time-sync.target
+
+[Service]
+ExecStart=/home/pi/node/bin/node /home/pi/reporter/app.js
+Restart=always
+Environment=NODE_ENV=production 
+SyslogIdentifier=reporter
+
+[Install]
+WantedBy=multi-user.target
