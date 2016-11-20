@@ -17,6 +17,33 @@ To connect to the RPi Zero without a network cable:
   - You may need to set the device to `link-local` mode in order for this to work
 8. SSH into the device with `ssh pi@raspberrypi.local`
 
+> It's even cooler if you can share your WiFi connection over Ethernet. 
+Share the *WiFi* connection, not the ethernet-over-USB connection, 
+or you will be sad.
+
+## Software
+
+### Node.js
+
+Download the latest `armv6` release from the [Node.js site](https://nodejs.org/en/download/).
+
+Unzip with `tar xvf $FILE_YOU_DOWNLOADED`.
+
+Add that directory's `bin` folder to your path.
+
+### websocketd
+
+Download the latest `arm` release (not `arm64`) from [GitHub](https://github.com/joewalnes/websocketd/releases/latest)
+
+Use `wget` not `curl -O`, as RPi native `curl` seems to mess up the file in transit.
+
+Unzip, and place `websocketd` somewhere in your `PATH` (I used `/usr/bin` because it's easy)
+
+## Fun things that can be used for telemetry
+
+- `/sys/class/net/usb0/statistics/tx_packets` for network packets transmitted
+- Check other `/sys/class` files for fun stuff (like LED controls, etc)
+
 ## Other links
 http://www.jeffgeerling.com/blogs/jeff-geerling/controlling-pwr-act-leds-raspberry-pi  
 https://learn.adafruit.com/turning-your-raspberry-pi-zero-into-a-usb-gadget?view=all
